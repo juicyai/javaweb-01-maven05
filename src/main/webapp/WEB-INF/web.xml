@@ -14,4 +14,62 @@
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>image</servlet-name>
+    <servlet-class>com.koki.servlet.ImageSerlvet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>image</servlet-name>
+    <url-pattern>/image</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>session01</servlet-name>
+    <servlet-class>com.koki.servlet.sessionSerlvet01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>session01</servlet-name>
+    <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>session02</servlet-name>
+    <servlet-class>com.koki.servlet.sessionServlet02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>session02</servlet-name>
+    <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>session03</servlet-name>
+    <servlet-class>com.koki.servlet.sessionInvalidate03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>session03</servlet-name>
+    <url-pattern>/s3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>cookie01</servlet-name>
+    <servlet-class>com.koki.servlet.cookieDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookie01</servlet-name>
+    <url-pattern>/c1</url-pattern>
+  </servlet-mapping>
+  <!--设置session时效，15mins后失效-->
+  <session-config>
+    <session-timeout>5</session-timeout>
+  </session-config>
+
+  <filter>
+    <filter-name>contentFilter</filter-name>
+    <filter-class>com.koki.servlet.filterContent</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>contentFilter</filter-name>
+    <url-pattern>/hello</url-pattern>
+  </filter-mapping>
 </web-app>
